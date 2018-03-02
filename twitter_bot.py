@@ -5,10 +5,10 @@ import tweepy as tp
 
 """Posts to twitter with status updates"""
 
-consumer_key = 'fYBOPLfzs9EzIITE7YEri14sr'
-consumer_secret = '4EeVifr2OcgAwopRyTDuzXrT2QYb0GtWgJFYBSAhWtOK162qO9'
-access_token = '3245510334-9kKOzBQFcdNFvdtmiomJRwutUnVnaZe3vHUlw0C'
-access_token_secret = 'abqyb0tC9u32tK1mqgEAO4qLsbOf7fmPhYRPIeEqsoLTs'
+consumer_key = '*************'
+consumer_secret = '*************************************************'
+access_token = '******************************************'
+access_token_secret = '************************************'
 
 bot = Twitter_Bot(consumer_key, consumer_secret, access_token, access_token_secret)
 bot.follow_user('#realestate', 2)
