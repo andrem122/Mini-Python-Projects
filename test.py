@@ -1,27 +1,38 @@
-"FizzBuzz"
+def group_by_owners(dictionary):
+    #loop through dictionary
 
-a, b = 0, 1
-for i in xrange(1, 11):
-    print a
-    a, b = b, b + a
-    """
-    0
-    b = b + a = 1 + 0
-    a = 1
-    1
-    b = b + a = 1 + 1
-    a = 1
-    1
-    b = b + a = 1 + 2
-    a = 2
-    2
-    b = b + a = 3 + 2
-    a = 3
-    3
-    b = b + a = 5 + 3
-    a = 5
-    5
-    b = b + a = 8 + 5
-    a = 8
-    8
-    """
+    result_dict = {}
+    for value in dictionary.values(): #['Randy', 'Stan', 'Randy']
+        result_arr = []
+        for key in dictionary.keys(): #['Input.txt', 'Code.py', 'Output.txt']
+            #if the value of one key is the same as another, put the keys in a list 
+            if dictionary[key] == value:
+                if value not in result_arr:
+                    result_arr.append(key)#['Input.txt']
+                    result_dict[value] = result_arr #{'Randy': ['Input.txt']}
+
+    return result_dict
+
+#res = group_by_owners( {'Input.txt': 'Randy', 'Code.py': 'Stan', 'Output.txt': 'Randy'})
+
+#print(res)
+
+def is_palindrome(word):
+        #normalize string
+        word = word.lower()
+        #split into array
+        word_arr = list(word)
+        
+        #reverse array
+        reversed_array = list(reversed(word_arr))
+        
+        #compare array elements
+        l = len(word_arr)
+        for i in range(l-1):
+            if word_arr[i] != reversed_array[i]:
+                return False
+            
+            return True
+
+res = is_palindrome('Deleveled')
+print(res)
