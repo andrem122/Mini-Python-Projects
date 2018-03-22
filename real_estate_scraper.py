@@ -10,6 +10,7 @@ firefox_capabilities = DesiredCapabilities.FIREFOX
 firefox_capabilities['marionette'] = True
 br = webdriver.Firefox(capabilities=firefox_capabilities)
 
+#create or get directory
 def get_or_create_dir(name):
     if not os.path.exists(name):
         os.mkdir(name)
