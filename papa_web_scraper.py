@@ -28,12 +28,10 @@ def format_name(name):
 #gets owner name from the PAPA apprasier website
 def get_owner_name(addresses):
 
-    #firefox_capabilities = DesiredCapabilities.FIREFOX
-    #firefox_capabilities['marionette'] = True
+    firefox_capabilities = DesiredCapabilities.FIREFOX
+    firefox_capabilities['marionette'] = True
 
-    #br = webdriver.Firefox(capabilities=firefox_capabilities)
-    CHROMEDRIVER_PATH = '/usr/lib/chromium-browser/chromedriver'
-    br = webdriver.Chrome(CHROMEDRIVER_PATH)
+    br = webdriver.Firefox(capabilities=firefox_capabilities)
     owner_info = {}
     delay = 20
 
