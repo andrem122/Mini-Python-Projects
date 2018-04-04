@@ -48,7 +48,6 @@ def get_owner_name(addresses):
         br.switch_to.frame(iframeSrch)
 
         #interact with search elements
-        #interact with search elements
         br.find_element_by_id('imgAddress').click()
         br.find_element_by_id('txtAddress').send_keys(address)
         br.find_element_by_id('btnAddressSrch').click()
